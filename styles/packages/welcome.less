@@ -1,0 +1,77 @@
+.welcome {
+  border-right: 1px solid @base-border-color;
+  color: @aw-grey;
+
+  .welcome-container {
+    .welcome-title {
+      font-size: 1.25rem; /* 20/16 */
+      font-weight: 700;
+    }
+
+    .welcome-panel {
+        font-size: 0.875rem; /* 14/16 */
+
+        &:nth-child(2) {
+          > p {
+            margin-bottom: 1.563rem; /* 25/16 */
+            font-size: 0.938rem; /* 15/16 */
+          }
+
+          > ul {
+
+            li {
+              line-height: 1.875rem; /* 30/16 */
+            }
+          }
+        }
+
+        .input-checkbox {
+          background-color: @aw-blue;
+
+          &::before, &::after {
+            background-color: @text-color-highlight;
+          }
+        }
+    }
+
+    .welcome-footer {
+      font-size: 0.813rem; /* 13/16 */
+    }
+  }
+
+  &.is-guide {
+    .welcome-container {
+
+      .welcome-card {
+        border: none;
+
+        .welcome-summary {
+          padding: 1.25rem; /* 20/16 */
+          border-radius: 3px;
+          font-size: 0.938rem; /* 15/16 */
+          font-weight: 500;
+          color: @text-color;
+          background-color: @aw-dark-purple;
+
+          .welcome-highlight {
+            font-weight: 700;
+            color: @aw-grey;
+          }
+        }
+
+        .welcome-detail {
+          border-top: none;
+          background-color: @aw-dark-pure-purple;
+
+          .btn.btn-primary {
+            border-radius: 4px;
+            background-color: @btn-background-color-primary;
+            font-size: 0.875rem; /* 14/16 */
+            height: 2.5rem; /* 40/16 */
+            min-width: 7.5rem; /* 120/16 */
+          }
+        }
+      }
+    }
+  }
+}

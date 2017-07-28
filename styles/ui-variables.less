@@ -1,16 +1,3 @@
-
-// UI Variables
-// -------------------
-
-// These are the official UI variables that every UI theme should define.
-// It allows other packages to match your theme.
-
-// Overrides: atom/static/variables/ui-variables.less
-
-// Try to edit some of the values below to see your theme change.
-// A good start is to change the color of the `@base-background-color` variable.
-
-
 // Text Colors
 @text-color:           hsl(0,0%,66%);
 @text-color-subtle:    hsl(0,0%,50%);
@@ -33,7 +20,7 @@
 @app-background-color:       darken(@base-background-color, 5%);
 
 // Base colors
-@base-background-color: hsl(222,6%,22%);
+@base-background-color: transparent;
 @base-border-color:     darken(@base-background-color, 8%);
 
 // Component colors
@@ -88,7 +75,67 @@
 @component-line-height: 25px;
 
 @tab-height: 30px;
+@tab-font-size: 13px;
 
 // Misc
 @component-border-radius: 2px;
 @font-family: '.SFNSText-Regular', 'SF UI Text', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
+
+
+
+
+// ------------------------------------------ customize style start ------------------------------------------
+@import "syntax-variables";
+
+// @app-background-color: @aw-darkviolet;
+@app-background-color: @aw-lightviolet;
+
+// base color
+@base-background-color: @aw-lightviolet;
+
+// text color
+@text-color: @aw-gray-3;
+@text-color-link: @aw-cyan;
+@text-color-highlight: @aw-white-light;
+
+//component colors
+@tree-view-background-color: @app-background-color;
+
+
+@tab-bar-background-color: rgb(70,60,95);
+@tab-background-color-active: @aw-lightviolet;
+@tab-border-color-active: @aw-deep-purple;
+
+@btn-background-color-primary: #c85fff;
+
+// size
+@font-size: 0.813rem;
+@tab-height: 2.188rem;
+
+// atom angi_wen design key colors
+@aw-red: #ff3657;
+@aw-pink: #ff56a2;
+@aw-purple: #c85fff;
+@aw-deep-purple: #8c46ff;
+@aw-dark-purple: #342e4b;
+@aw-dark-pure-purple: #2e2942;
+@aw-indigo: #4d35ff;
+@aw-blue: #7585ff;
+@aw-light-blue: #94d5ff;
+@aw-cyan: #69d2de;
+@aw-teal: #10a6a1;
+@aw-teal-2: #10a67a;
+@aw-green: #4dd756;
+@aw-light-green: #77f980;
+@aw-lime: #6cda00;
+@aw-yellow: #caf30d;
+@aw-amber: #fee32c;
+@aw-orange: #fea3ac;
+@aw-brown: #8b410a;
+@aw-grey: #cac3c3;
+@aw-grey-2: #686565;
+@aw-blue-grey: #3e4b56;
+@aw-darkviolet: #1e1d27;
+@aw-gray-3: #a9a3a3;
+@aw-lightviolet: #29253c;
+@aw-white-light: #f7f7f7;

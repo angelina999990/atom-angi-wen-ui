@@ -6,19 +6,39 @@
 // Overrides: atom/tabs
 
 .tab-bar {
+  // border-bottom: 1px solid @base-border-color;
   background-color: @tab-bar-background-color;
-  border-bottom: 1px solid @base-border-color;
+  overflow-y: hidden;
+  overflow-x: auto;
 
   .tab {
-    color: @text-color;
+    max-width: 15.75rem; /* 252/16 */
+    min-width: 7rem;
     height: @tab-height;
+    border-right: 1px solid @tab-border-color;
     line-height: @tab-height;
     font-size: @font-size;
-    border-right: 1px solid @tab-border-color;
+    font-weight: 700;
+    color: @text-color-highlight;
+    text-align: center;
     background-color: @tab-background-color;
+    cursor: pointer;
+
     &.active {
+      min-width: 10rem;
+      border-bottom: solid 2px transparent;
       color: @text-color-selected;
       background-color: @tab-background-color-active;
+
+      &::after {
+        content: '';
+        position: relative;
+        bottom: 2px;
+        display: block;
+        width: 4.375rem;
+        margin: auto;
+        border-bottom: 2px solid @tab-border-color-active;
+      }
     }
 
 
