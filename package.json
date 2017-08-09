@@ -3,6 +3,7 @@
   "theme": "ui",
   "version": "0.0.0",
   "description": "A short description of your UI theme",
+  "main": "./lib/index",
   "keywords": [
     "ui",
     "theme"
