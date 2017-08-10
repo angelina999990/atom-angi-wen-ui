@@ -1,0 +1,56 @@
+.settings-view {
+  .config-menu {
+    border: none;
+    color: @text-color;
+    background: @base-background-color-light;
+
+    .nav {
+      li {
+        a {
+          color: @text-color!important;
+        }
+      }
+    }
+  }
+
+  .section {
+    .sub-section {
+      .package-card {
+        border: none;
+        background-color: @base-background-color-light;
+
+        .btn-toolbar {
+          .btn-group {
+            .btn {
+              height: @btn-height;
+              
+              &:not(.status-indicator) {
+                margin-left: @size-xs;
+                padding: 2px 12px 3px 12px;
+                line-height: @btn-height;
+                border-radius: @btn-border-radius;
+              }
+            }
+          }
+        }
+      }
+    }
+    &.themes-panel {
+      .themes-picker-item {
+        .active-theme-settings, .active-syntax-settings {
+          margin-left: @size-xs;
+          padding: @size-off;
+          height: @dropdown-bar-height;
+          width: @dropdown-bar-height;
+          border-radius: @size-xs;
+          line-height: @dropdown-bar-height;
+          background-color: @base-background-color-light;
+        }
+      }
+    }
+  }
+
+  select.form-control{
+    background-color: @base-background-color-light;
+  }
+}

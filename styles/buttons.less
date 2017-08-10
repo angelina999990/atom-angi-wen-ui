@@ -7,7 +7,7 @@
 
 .btn {
   color: lighten(@text-color, 6%);
-  background-color: @button-background-color;
+  background-color: @btn-background-color-base;
   &:hover,
   &:focus {
     color: @text-color-highlight;
@@ -30,11 +30,11 @@
 
 // Colored buttons -----------------------
 
-.btn.btn-primary { .btn-color(@background-color-info); }
-.btn.btn-info    { .btn-color(@background-color-info); }
-.btn.btn-success { .btn-color(@background-color-success); }
-.btn.btn-warning { .btn-color(@background-color-warning); }
-.btn.btn-error   { .btn-color(@background-color-error); }
+.btn.btn-primary { .btn-color(@btn-background-color-primary); }
+.btn.btn-info    { .btn-color(@btn-background-color-success); }
+.btn.btn-success { .btn-color(@btn-background-color-success); }
+.btn.btn-warning { .btn-color(@btn-background-color-warning); }
+.btn.btn-error   { .btn-color(@btn-background-color-error); }
 
 .btn-color(@bg) {
   color: @text-color-selected;

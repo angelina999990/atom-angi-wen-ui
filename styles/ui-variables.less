@@ -15,8 +15,6 @@
 @background-color-warning: hsl(32,   60%, 50%);
 @background-color-error:   hsl(0,    70%, 50%);
 
-@background-color-highlight: lighten(@base-background-color, 5%);
-@background-color-selected:  lighten(@base-background-color, 10%);
 @app-background-color:       darken(@base-background-color, 5%);
 
 // Base colors
@@ -92,6 +90,9 @@
 
 // base color
 @base-background-color: @aw-lightviolet;
+@base-background-color-light: @aw-dark-purple;
+@background-color-highlight: lighten(@base-background-color, 5%);
+@background-color-selected:  fade(@aw-black, 15%);
 
 // text color
 @text-color: @aw-gray-3;
@@ -106,19 +107,37 @@
 @tab-background-color-active: @aw-lightviolet;
 @tab-border-color-active: @aw-deep-purple;
 
-@btn-background-color-primary: #c85fff;
+@btn-background-color-base: lighten(@aw-darkviolet, 8%);
+@btn-background-color-default: lighten(@base-background-color, 10%);
+@btn-background-color-primary: @aw-purple;
+@btn-background-color-info: darken(@aw-light-blue, 30%);
+@btn-background-color-success: @aw-teal-2;
+@btn-background-color-warning: darken(@aw-amber, 5%);
+@btn-background-color-error: @aw-red;
+
+@input-background-color: @aw-darkviolet;
 
 // size
 @font-size: 0.813rem;
 @tab-height: 2.188rem;
-@dropdown-bar-height: 2.625rem;/* 42/16 */
+@dropdown-bar-height: 1.875rem; /* 30/16 */
+
+@btn-height: 1.875rem; /* 30/16 */
+@btn-border-radius: 3px;
+
+@size-off: 0px;
+@size-xs: 5px;
+@size-s: 10px;
+@size-m: 15px;
+@size-l: 20px;
+@size-xl: 25px;
 
 // atom angi_wen design key colors
 @aw-red: #ff3657;
 @aw-pink: #ff56a2;
 @aw-purple: #c85fff;
 @aw-deep-purple: #8c46ff;
-@aw-dark-purple: #342e4b;
+@aw-dark-purple: #342f4b;
 @aw-dark-pure-purple: #2e2942;
 @aw-indigo: #4d35ff;
 @aw-blue: #7585ff;
@@ -140,3 +159,4 @@
 @aw-gray-3: #a9a3a3;
 @aw-lightviolet: #29253c;
 @aw-white-light: #f7f7f7;
+@aw-black: #000000;
