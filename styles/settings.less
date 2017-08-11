@@ -1,19 +1,72 @@
 .settings-view {
+
+  .settings-panel {
+    label {
+      color: @text-color-subtle;
+      font-size: 0.875rem; /* 14/16 */
+    }
+  }
+
+  input[type="checkbox"] {
+    margin-top: 0.188rem; /* 3/16 */
+  }
   .config-menu {
+    flex: auto;
+    max-width: @tab-max-width;
+    min-width: 11.25rem; /* 180/16 */
+    padding-top: 1.25rem; /* 20/16 */
     border: none;
-    color: @text-color;
+    font-size: 0.938rem; /* 15/16 */
+    color: @text-color-subtle;
     background: @base-background-color-light;
 
     .nav {
       li {
         a {
-          color: @text-color!important;
+          color: @text-color-subtle!important;
+          padding: 0.625rem 4.063rem; /* 10/16*/ /* 65/16 */
+
+          &:hover {
+            background-color: @background-color-selected;
+          }
+        }
+      }
+    }
+
+    .button-area {
+      text-align: center;
+
+      .btn {
+        height: 2.188rem; /* 35/16 */
+        width: 11.25rem; /* 180/16 */
+        font-size: 0.938rem;
+
+        &:not(:hover) {
+          background-color: lighten(@base-background-color-light, 9%);
         }
       }
     }
   }
 
   .section {
+
+    .section-container {
+      .section-heading {
+        margin-bottom: @size-m;
+        font-size: 1.25rem; /* 20/16 */
+      }
+
+      .text, .setting-description {
+        line-height: 1.25rem; /* 20/16 */
+        font-size: 0.75rem; /* 12/16 */
+        color: @text-color;
+      }
+
+      .setting-title {
+        font-size: 0.875rem; /* 14/16 */
+      }
+    }
+
     .sub-section {
       .package-card {
         border: none;
@@ -23,7 +76,7 @@
           .btn-group {
             .btn {
               height: @btn-height;
-              
+
               &:not(.status-indicator) {
                 margin-left: @size-xs;
                 padding: 2px 12px 3px 12px;
@@ -38,19 +91,25 @@
     &.themes-panel {
       .themes-picker-item {
         .active-theme-settings, .active-syntax-settings {
+          margin-top: @size-xs;
           margin-left: @size-xs;
           padding: @size-off;
           height: @dropdown-bar-height;
           width: @dropdown-bar-height;
           border-radius: @size-xs;
           line-height: @dropdown-bar-height;
-          background-color: @base-background-color-light;
+          
+          &:not(:hover) {
+            background-color: @base-background-color-light;
+          }
         }
+
       }
     }
   }
 
   select.form-control{
+    margin-top: @size-xs;
     background-color: @base-background-color-light;
   }
 }
