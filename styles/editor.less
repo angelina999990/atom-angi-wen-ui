@@ -6,9 +6,12 @@
 
 
 atom-text-editor[mini] {
+  height: @input-height;
+  max-height: @input-height;
   padding-left: @component-padding/2;
-  color: @text-color;
   border-radius: @component-border-radius;
+  color: @text-color;
+  line-height: @input-height;
   background-color: @input-background-color;
 
   &.is-focused {

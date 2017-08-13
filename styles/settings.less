@@ -42,7 +42,7 @@
         font-size: 0.938rem;
 
         &:not(:hover) {
-          background-color: lighten(@base-background-color-light, 9%);
+          background-color: lighten(desaturate(spin(#342f4b, -1.6234), 2.7054), 8.0392);
         }
       }
     }
@@ -60,6 +60,7 @@
         line-height: 1.25rem; /* 20/16 */
         font-size: 0.75rem; /* 12/16 */
         color: @text-color;
+        font-weight: normal;
       }
 
       .setting-title {
@@ -71,6 +72,18 @@
       .package-card {
         border: none;
         background-color: @base-background-color-light;
+
+        * {
+          font-size: @font-size-s;
+        }
+
+        .package-name {
+          font-weight: bold;
+        }
+
+        .package-description {
+          font-size: @font-size-xs;
+        }
 
         .btn-toolbar {
           .btn-group {
@@ -98,7 +111,7 @@
           width: @dropdown-bar-height;
           border-radius: @size-xs;
           line-height: @dropdown-bar-height;
-          
+
           &:not(:hover) {
             background-color: @base-background-color-light;
           }
