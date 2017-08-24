@@ -3,7 +3,7 @@
   .settings-panel {
     label {
       color: @text-color-subtle;
-      font-size: 0.875rem; /* 14/16 */
+      font-size: @font-size-s; /* 14/16 */
     }
   }
 
@@ -64,7 +64,7 @@
       }
 
       .setting-title {
-        font-size: 0.875rem; /* 14/16 */
+        font-size: @font-size-s; /* 14/16 */
       }
     }
 
@@ -124,5 +124,20 @@
   select.form-control{
     margin-top: @size-xs;
     background-color: @base-background-color-light;
+  }
+
+  .table {
+    font-size: @font-size-s;
+
+    td, th {
+      border-color: @table-row-border-color;
+      border-width: 1px;
+      padding-top: 0.813rem; /* 13/16 */
+      padding-bottom: 0.813rem; /* 13/16 */
+    }
+
+    th {
+      color: @text-color-subtle;
+    }
   }
 }
