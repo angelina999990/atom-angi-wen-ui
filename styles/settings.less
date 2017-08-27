@@ -56,6 +56,19 @@
         font-size: 1.25rem; /* 20/16 */
       }
 
+      .section-heading-count {
+        color: @text-color-subtle;
+        font-size: 0.85em;
+      }
+
+      section.sub-section {
+
+        .sub-section-heading {
+          font-size: @font-size-normal;
+          color: @text-color-subtle;
+        }
+      }
+
       .text, .setting-description {
         line-height: 1.25rem; /* 20/16 */
         font-size: 0.75rem; /* 12/16 */
@@ -68,39 +81,41 @@
       }
     }
 
-    .sub-section {
-      .package-card {
-        border: none;
-        background-color: @base-background-color-light;
+    // .sub-section {
+    //   .package-card {}
+    // }
+    .package-card {
+      border: none;
+      background-color: @base-background-color-light;
 
-        * {
-          font-size: @font-size-s;
-        }
+      * {
+        font-size: @font-size-s;
+      }
 
-        .package-name {
-          font-weight: bold;
-        }
+      .package-name {
+        font-weight: bold;
+      }
 
-        .package-description {
-          font-size: @font-size-xs;
-        }
+      .package-description {
+        font-size: @font-size-xs;
+      }
 
-        .btn-toolbar {
-          .btn-group {
-            .btn {
-              height: @btn-height;
+      .btn-toolbar {
+        .btn-group {
+          .btn {
+            height: @btn-height;
 
-              &:not(.status-indicator) {
-                margin-left: @size-xs;
-                padding: 2px 12px 3px 12px;
-                line-height: @btn-height;
-                border-radius: @btn-border-radius;
-              }
+            &:not(.status-indicator) {
+              margin-left: @size-xs;
+              padding: 2px 12px 3px 12px;
+              line-height: @btn-height;
+              border-radius: @btn-border-radius;
             }
           }
         }
       }
     }
+
     &.themes-panel {
       .themes-picker-item {
         .active-theme-settings, .active-syntax-settings {
@@ -119,6 +134,12 @@
 
       }
     }
+
+    &.keybinding-panel {
+      .editor-container {
+        max-width: 750px;
+      }
+    }
   }
 
   select.form-control{
@@ -134,6 +155,10 @@
       border-width: 1px;
       padding-top: 0.813rem; /* 13/16 */
       padding-bottom: 0.813rem; /* 13/16 */
+
+      &:first-child {
+        padding-left: @size-off;
+      }
     }
 
     th {
